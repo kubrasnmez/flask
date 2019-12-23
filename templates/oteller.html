@@ -1,0 +1,46 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+    <title>OTELLERİMİZ</title>
+<div style="background-color:#f3f3f3;">
+<div class="container">
+{% extends "layout.html" %}
+{% block body %}
+
+  {% if oteller %}
+  <form action="/search" method="post">
+    <input class="input" name="keyword" type="text" placeholder="Aramak istediğiniz kelimeyi giriniz..." style="width: 320px; height: 55px; border: orangered; border-radius: 7px; background-color:#333A40; color: white;" >
+    <button class="btn btn-lg btn-danger" type="submit">Ara</button>
+  </form>
+  <hr>
+  
+  <div align="center" style="background-color:#333A40; color:#f3f3f3; padding: 16px; border-radius: 5px; border-width: 2px; border-color: #545454;"><h2 style=" font-family:Comic Sans MS; font-size: 28px; ">OTELLERİMİZ</h2></div>
+<br>
+<hr>
+<br>
+  <div class="row">
+    {% for otel in oteller %}
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-3">
+    <div class="container">
+        <div class="card" style="height: 350px;">
+          <div align="center">
+            <img class="card-img-top" src="{{otel.resim}}">
+            <div class="card-body">
+              <h4 class="card-title">{{otel.tittle}}</h4>
+              <br>
+              <a href="/otel/{{otel.otelid}}" class="btn" style="background-color:#545454 ; color: #e3e3e3;">Daha Fazla</a>
+              <br>
+            </div>
+          </div>
+          </div>
+           </div>
+           </div>
+    <br>
+    <br>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-danger">Bu sayfada henüz otel bulunmuyor.</div>
+{% endif %}
+
+{% endblock body %}
+</div>
+</div>

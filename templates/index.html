@@ -1,0 +1,107 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+    <title>ANASAYFA</title>
+{% extends "layout.html" %}
+{% block body %}
+
+<div style="background-color: #d4d5d5; margin-top: -16px;" >
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="http://www.ananasotel.com/img/banner-1.jpg" alt="First slide" height="580px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.cukurovaertenotel.com/medias/slide/big/11/3.jpg" alt="Second slide" height="580px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://tatilsepeti.cubecdn.net/Files/TesisResim/01331/tsr01331636941232618976528.jpg" alt="Third slide" height="580px">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://antmare.com/app/files/7515_0358_1105-antmare-swimming-pool-01.jpg" alt="Four slide" height="580px">
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>   
+      <br>
+      <div class="oneri" style="background-color:#333A40; color:#d7d7d7;"  >
+        <br>
+        <br><br><br>
+  
+           <div class="container">
+               <div align="center"><i><h4><font color="#d7d7d7"><font face="Comic Sans MS">Öneri ve Fikirleriniz İçin : </font></font></h4></i></div>
+            <br>
+            <form id="form1" >
+            <div class="row">
+               <div class="col-md-6">
+               <div class="form-group">
+                   <label for="adi"><i><b><font color="#d7d7d7"><font face="Comic Sans MS">İsim : </font> </font></b></i></label>
+               <input class="form-control" id="adi" placeholder="Adınızı Giriniz : ">
+               </div>
+               </div>
+               <div class="col-md-6">
+               <div class="form-group">
+                   <label for="soyadi"><i><b><font color="#d7d7d7" face="Comic Sans MS"> Soyisim : </font></b></i></label>
+               <input class="form-control" id="soyadi" placeholder="Soyadınızı Giriniz : ">
+               </div></div>
+               </div>
+                <div class="form-group">
+                    <label for="comment"><i><b><font color="#d7d7d7"face="Comic Sans MS">Öneri veya Yorum : </font></b></i></label>
+                <textarea rows="4" class="form-control" id="comment" placeholder="Öneri ve Yorum Giriniz : "></textarea>
+               </div>
+               <div align="center">
+                 <div class="row">
+                   <div class="col-md-6">
+                <button type="submit" class="sumbit form-control" style="background-color: #f0e32c; width: 400px;"><b>KAYDET</b></button></div>
+                <div class="col-md-6">
+              <button type="reset" class="reset form-control" style="background-color: #f0e32c; width: 400px;"><b>SİL</b></button></div></div></div>
+                   </form>
+                </div>
+              <br>
+        </div>
+        
+         <div class="iletisim" style="background-color:#d7d7d7; padding: 8px;">
+             <div class="container">
+             <div align="center">  
+         <div class="row">
+             
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                 <div class="instagram"><a href="https://www.instagram.com/kubrasnmz/" target="_blank"><font size="8px" color="black"><i class="fab fa-instagram"></i></font></a></div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                 <div class="mail"> <a href="mailto:sonmezkbra@gmail.com"><font size="8px" color="black"><i class="fas fa-envelope"></i></font></a></div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+             <div class="twitter"><a href=https://wa.me/905419208726 target=”_blank” ><font size="8px" color="black">
+                 <i class="fab fa-whatsapp"></i></font></a></div>
+             </div>
+             <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                 <div class="facebook">
+                     <a href="https://twitter.com/1kubrasonmez" target="_blank">
+                         <font size="8px" color="black">
+                          <i class="fab fa-twitter"></i></font></a>
+                 </div>
+             </div>
+             </div>
+             </div></div>
+    </div>
+      <nav id="sonn" style="background-color:#333A40; color: silver;"  class="navbar navbar-expand son" class="col-lg-12 col-md-12 col-sm-12 mb-3">
+        <div class="container">
+        <div class="row">
+          
+         <a id="anasayfalink" class="navbar-brand"  href="#"><div style="color: silver; margin-left: 50px;">Anasayfa</div></a>
+         
+       <div  class="navbar-brand" style="margin-left: 600px;" >
+            Design By Kübra Sönmez COPYRIGHT © 2019
+         
+            </div>
+        </div>
+          </div>
+    </nav>
+</div>
+    {% endblock %}

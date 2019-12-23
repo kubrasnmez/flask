@@ -1,0 +1,33 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+    <title>KULLANICI GİRİŞ</title>
+{% extends "layout.html" %}
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+<div class="row">
+        <div class="col-md-8">
+                
+<img src="static/img/tatil.jpg" style="margin-top: -16px; height: 649px;">
+        </div>
+<div class="col-md-4">
+<br><br><br><br>
+<h5 style=" font-size:medium; font-style: italic; font-family: sans-serif; color: #021192;">Kullanıcı girişi yapmak için lütfen kullanıcı adı ve parolanızı giriniz</h5>
+<form method = "post"  style="margin-left: 110px;" >
+        
+        <br><br><br>
+        <h5 style=" font-size:medium; font-style: italic; font-family: sans-serif; color:#021192"><div style="width: 200px; height: 50px; border-radius: 4px;">{{ render_field(form.username,class="form-control")}}</div></h5>
+        <br><br>
+        <h5 style="font-size: medium; font-style: italic; font-family: sans-serif; color:#021192"><div style="width: 200px; height: 50px; border-radius: 4px;">{{ render_field(form.password,class="form-control")}}</div></h5>
+        <br>
+        <div style="margin-left: 25px;"><button type="submit" class="btn " ><div style="background-color: #02108b; color: aliceblue; width: 100px; height: 40px; border-radius: 7px; padding: 10px;">Giriş Yap</div></button></div>
+
+
+</form>
+<br><br>
+<a href="/register">
+<div style="margin-left: 25px;"><button type="submit" class="btn " ><div style="background-color: #636cb9; color: aliceblue; width: 350px; height: 40px; border-radius: 7px; padding: 10px;">Üyeliğiniz yok mu ? Hemen Kaydolun.</div></button></div>
+</a>
+</div>
+{% endblock body %}
+</div>
+</div>

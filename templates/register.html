@@ -1,0 +1,35 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+    <title>KULLANICI KAYIT</title>
+<div style="background-color:#efefef ;">
+<div class="container">
+{% extends "layout.html" %}
+
+{% block body %}
+
+{% from "includes/formhelpers.html" import render_field %}
+<br>
+<h3 style="background-color: #d5d5d5; padding: 20px; border-radius: 5px; color:#333a40;" align="center">Üye Ol</h3>
+<br>
+<hr>
+<br>
+<form method = "post" style="background-color: #f1f1f1; margin-left: 330px;" >
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333; " ><div style="width: 400px;" > {{render_field(form.name,class="form-control") }}</div></h5>
+        
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333;"><div style="width: 400px;">{{ render_field(form.username,class="form-control") }}</div></h5>
+        
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333;"><div style="width: 400px;">{{ render_field(form.email,class="form-control") }}</div></h5>
+        
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333;"><div style="width: 400px;">{{ render_field(form.password,class="form-control") }}</div></h5>
+        
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333;"><div style="width: 400px;">{{ render_field(form.confirm,class="form-control") }}</div></h5>
+        <br>
+        <button type="submit" class="btn btn-danger " style="margin-left: 150px;" >Kayıt Ol</button>
+      <br>
+<br>
+</form>
+
+{% endblock body %}
+
+</div>
+
+</div>

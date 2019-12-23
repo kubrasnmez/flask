@@ -1,0 +1,61 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+<form action="/sepetim" method="POST">
+<input type="hidden" name="otel.tittle" value = "{{otel.tittle}}">
+    <title>{{otel.tittle}}</title>
+<div class="container">
+{% extends "layout.html" %}
+{% block body %}
+{% if otel %}
+<h1 align="center" style="background-color:#002e08; color:#f3f3f3; padding: 17px; border-radius: 9px; font-style: italic; font-family: sans-serif; border-width: 5px; border-color: #f3f3f3; border-style: double;">{{otel.tittle}}</h1>
+<br>
+
+<h3 style="color: #ba9e00;">
+<b>
+<u>
+DETAYLAR : 
+</u>
+</b>
+</h3>
+<b>{{otel.bilgi}}</b>
+<hr>
+<h5 style="color: #ba9e00;">
+<b><u>Oluşturulma tarihi : </u></b></h5>
+<b>{{otel.created_text}}</b>
+<hr>
+<h5 style="color: #ba9e00;">
+<b><u> Fiyat :  </u></b></h5>
+ <b><input type="hidden" name="otel.fiyat" value="{{otel.fiyat}}">{{otel.fiyat}} TL</b>
+    <hr>
+    <h5 style="color: #ba9e00;">
+    <b><u>
+        Konum : 
+        </u></b></h5>
+        <b>
+        {{otel.konum}}
+        </b>
+        <hr>
+<br>
+<h5 style="color: #ba9e00;">
+    <b><u>
+    Resim : 
+    </u></b></h5>
+    <br>
+<div align="center">
+<img  src = "{{otel.resim}}">
+</div>
+<br>
+<div align="center">
+<a href="/sepetim">
+<button  type="submit"  class="btn"><div style="background-color:#002e08; color: #f3f3f3; border-radius: 4px;  padding: 17px;"><h5><i>SEPETE EKLE</i></h5></div></button>
+</a>
+</div>
+</div>
+{% else %}
+<div class="alert alert-warning">Böyle bir otel bulunmuyor.</div>
+
+{% endif %}
+
+{% endblock body %}
+
+</div>
+</form>

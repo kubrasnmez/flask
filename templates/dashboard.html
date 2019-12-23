@@ -1,0 +1,41 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+<title>KONTROL PANELİ</title>
+{% extends "layout.html" %}
+{% block body %}
+<br>
+<h3 align="center">Kontrol Paneli</h3>
+<br>
+<hr>
+<br>
+<div class="container">
+<div align="center"><a href="/otelekle" class="btn btn-danger" >Otel Ekle</a></div>
+<br>
+<br>
+<table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Başlık</th>
+        <th scope="col">Yazar</th>
+        <th scope="col">Tarih</th>
+        <th scope="col">Güncelle</th>
+        <th scope="col">Sil</th>
+
+      </tr>
+    </thead>
+    <tbody>
+    {% for otel in oteller %}
+    <tr>
+        <th scope="row">{{otel.otelid}}</th>
+        <td >{{otel.tittle}}</td>
+        <td>{{otel.kisi}}</td>
+        <td>{{otel.created_text}}</td>
+        <td><a href="/edit/{{otel.otelid}}" class="btn btn-danger">Güncelle</a></td>
+        <td><a href="/delete/{{otel.otelid}}" class="btn btn-danger">Sil</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock body %}
+

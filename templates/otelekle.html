@@ -1,0 +1,23 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+    <title>OTEL EKLE</title>
+{% extends "layout.html" %}
+{% block body %}
+<div class="container">
+<h3>Otel Oluştur</h3>
+<hr>
+
+{% from "includes/formhelpers.html" import render_field %}
+
+<form method = "post" enctype = multipart/form-data>
+        
+        {{ render_field(form.tittle) }}
+        {{render_field(form.kisi)}}
+        {{ render_field(form.bilgi) }}
+        {{render_field(form.fiyat)}}
+        {{render_field(form.konum)}}
+        {{render_field(form.resim)}}
+        <div class = "center"><button type="submit" class="btn btn-danger " >Otel Kaydet</button></div>
+
+</form>
+</div>
+{% endblock body %}

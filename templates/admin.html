@@ -1,0 +1,29 @@
+<div style="background-color:#d7d7d7; height: 720px;">
+<link rel="shortcut icon" href="/static/img/logo.ico">
+<title>ADMİN GİRİŞ</title>
+<div class="container">
+{% extends "layout.html" %}
+{% block body %}
+
+<h3 style="background-color: #d5d5d5; padding: 20px; border-radius: 5px; color:#333a40;" align="center">Giriş Yap(Admin)</h3>
+<hr>
+
+{% from "includes/formhelpers.html" import render_field %}
+
+<br>
+<div align="center">
+<form method = "post" style="background-color: #e9cb05; width: 600px; height: 450px; border-radius: 15px;">
+        <br><br><br><br>
+        <h5 style="font-style: italic; font-family: sans-serif;">Admin girişi için lütfen kullanıcı adı ve şiftenizi giriniz.</h5>
+        <br>
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333;"><div style="width: 300px; height: 50px; border-radius: 5px;" >{{ render_field(form.username) }}</div></h5>
+        <br>
+        <h5 style=" font-size:large; font-style: italic; font-family: sans-serif; color: #333333; " ><div style="width: 300px; height: 50px; border-radius: 5px;" >{{ render_field(form.password) }}</div></h5>
+        <br>
+        <div class = "center"><button type="submit" class="btn btn-secondary " >Giriş Yap</button></div>
+      
+</form>
+</div>
+{% endblock body %}
+</div>
+</div>

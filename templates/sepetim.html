@@ -1,0 +1,43 @@
+<link rel="shortcut icon" href="/static/img/logo.ico">
+    <title>SEPETİM</title>
+<div class="container">
+{% extends "layout.html" %}
+    
+{% block body %}
+<br>
+
+        {% for s in sepet %}
+        <div class="col-md-8">
+            <table  class="table table-bordered table-striped" style="margin-left: 170px;">
+                <thead align="center">
+                    <th>Otel Adı</th>
+                    <th>Fiyatı</th>
+                    <th>Kişi Sayısı</th>
+                    <th>Sepetten Çıkar</th>
+                </thead>
+                <tbody align="center">
+                    <tr></tr>
+                    <td>{{s[1]}}</td>
+                        <td><strong style="color: red;">{{s[2]}}</strong></td>
+                        <td><input type="number" value="1" min="1"  max="5" inputmode="numeric" placeholder="Kişi sayısı" style="width: 90px;"></td>
+                        
+                        <form action="/sepetsil" method="POST">
+                            <td>
+                                <button type="submit" class="btn btn-danger" name="s[1]" value="{{s[1]}}">Sepetten Çıkar</button>
+                            </td>
+                        </form>
+                    </tr> 
+
+                </tbody> 
+                <tfoot>
+            <th colspan="4"><div  align="center"><a href="/rezervasyon" class="btn btn-danger">Rezervasyon Yap</a></div></th>            
+            </strong></th></tfoot>
+            </table>
+            
+        </div>
+        {% endfor %} 
+    </div>
+</div>
+{% endblock body %}
+    
+</div>
